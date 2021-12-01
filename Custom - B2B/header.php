@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <title><?php bloginfo( 'name' ); ?></title>
@@ -8,3 +9,4 @@
 
 <body <?php body_class(); ?>>
 <div class="container">
+<?php wp_page_menu( array|string $args = array() ) ?>
