@@ -5,5 +5,3 @@ function art_load_style_scripts(){
 }
 
 add_action('wp_enqueue_scripts', 'art_load_style_scripts');
-
-?>
