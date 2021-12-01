@@ -9,4 +9,8 @@
 
 <body <?php body_class(); ?>>
 <div class="container">
-<?php wp_page_menu( array|string $args = array() ) ?>
+<?php wp_page_menu($args = array(
+        'menu' => 'hoofdmenu'
+        ) 
+    ) 
+?>
