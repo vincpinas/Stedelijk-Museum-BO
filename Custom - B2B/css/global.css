@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Union;
+  src: url("../Union/union_regular.woff2") format("opentype");
+}
+body {
+  background-color: #FFFFFF;
+  color: #0A0A0A;
+  font-family: "Union";
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.container .menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container .menu ul a {
+  text-decoration: none;
+  color: black;
+}
+.container .menu ul a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=global.css.map */

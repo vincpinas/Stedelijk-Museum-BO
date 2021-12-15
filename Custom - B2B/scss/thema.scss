@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Union;
+    src: url("../Union/union_regular.woff2") format("opentype");
+}   
+
+body {
+    background-color: $white;
+    color: $black;
+    font-family: 'Union';
+}
+
+.container  {
+    width: 80%;
+    margin: 20px auto;
+}
