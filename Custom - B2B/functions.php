@@ -21,7 +21,9 @@ add_action( 'init', 'art_init_menu' );
 function art_load_pricing_button() {
     ?>
         <script>
-            const pricing_button = document.createElement('button', { className: 'pricingNavButton' });
+            const pricing_button = document.createElement('button');
+            pricing_button.className = 'pricing-button';
+            pricing_button.innerHTML = 'Prices';
             pricing_button.addEventListener('click', () => document.getElementById("pricing-section").scrollIntoView({ behavior: 'smooth', block: 'end'}));
 
             document.addEventListener('DOMContentLoaded', () => document.body.appendChild(pricing_button));

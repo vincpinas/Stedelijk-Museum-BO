@@ -7,10 +7,28 @@ body {
   color: #0A0A0A;
   font-family: "Union";
 }
-
-.container {
+body .container {
   width: 80%;
   margin: 20px auto;
+}
+body .pricing-button {
+  color: white;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  box-shadow: 5px 5px 10px #dd8592;
+  background-color: #C5374C;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+}
+body #pricing-section {
+  width: 100%;
+  height: 200vh;
 }
 
 .container .menu ul {
