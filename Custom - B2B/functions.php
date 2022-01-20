@@ -15,3 +15,17 @@ function art_init_menu() {
     );
 }
 add_action( 'init', 'art_init_menu' );
+
+
+
+function art_load_pricing_button() {
+    ?>
+        <script>
+            const pricing_button = document.createElement('button', { className: 'pricingNavButton' });
+            pricing_button.addEventListener('click', () => document.getElementById("pricing-section").scrollIntoView({ behavior: 'smooth', block: 'end'}));
+
+            document.addEventListener('DOMContentLoaded', () => document.body.appendChild(pricing_button));
+        </script>
+    <?php
+}
+add_action('wp_head', 'art_load_pricing_button');
