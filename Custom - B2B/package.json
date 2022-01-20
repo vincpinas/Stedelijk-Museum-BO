@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "sass --style expanded scss/art-theme.scss css/art-theme.css",
-    "watch": "sass --watch scss:css --style expanded"
+    "watch": "sass --watch css:scss --style expanded"
   },
   "keywords": [],
   "author": "",

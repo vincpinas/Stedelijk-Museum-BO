@@ -19,6 +19,12 @@ endif; ?>
 
 <section id='pricing-section'>
 
+<?php 
+echo do_shortcode('[smartslider3 slider="2"]');
+?>
+
+<?php echo do_shortcode( '[grw id="33"]' ); ?>
+
 </section>
 
 <?php get_footer(); ?>
