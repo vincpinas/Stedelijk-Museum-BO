@@ -15,8 +15,10 @@ if ( have_posts() ) :
 else :
     echo '<p>There are no posts!</p>';
 
-endif;
+endif; ?>
 
-get_footer();
+<section id='pricing-section'>
 
-?>
+</section>
+
+<?php get_footer(); ?>
