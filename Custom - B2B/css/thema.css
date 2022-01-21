@@ -1,17 +1,157 @@
-/* Error: Undefined variable.
- *   ,
- * 7 |     background-color: $white;
- *   |                       ^^^^^^
- *   '
- *   scss/thema.scss 7:23  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 7 \2502      background-color: $white;\a   \2502                        ^^^^^^\a   \2575 \a   scss/thema.scss 7:23  root stylesheet";
+@font-face {
+  font-family: Union;
+  src: url("../Union/union_regular.woff2") format("opentype");
 }
+h1, h2, h3, h4, li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #0A0A0A;
+  font-family: "Union";
+  padding: 0;
+  margin: 0;
+}
+body .container {
+  width: 95%;
+  margin: 20px auto;
+}
+@media only screen and (max-width: 900px) {
+  body .container {
+    width: 100%;
+  }
+}
+body .hero {
+  height: 100vh;
+}
+body .hero .hero_title {
+  background-color: #0A0A0A;
+  padding: 1em;
+}
+body .hero .hero_title .logo {
+  fill: white;
+}
+body .hero .hero-content {
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  overflow: hidden;
+}
+body .hero .hero-content .hero-left {
+  width: 50%;
+  position: relative;
+}
+body .hero .hero-content .hero-left .textbox {
+  height: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .hero .hero-content .hero-left .textbox h1 {
+  font-size: 7vh;
+  font-weight: lighter;
+  color: #0A0A0A;
+  text-shadow: -2px -2px #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF;
+  z-index: 4;
+  margin-left: 2px;
+}
+body .hero .hero-content .hero-left .textbox div {
+  background-color: #0A0A0A;
+  color: white;
+  z-index: 4;
+  padding: 30px 6px 30px 6px;
+  font-weight: 100;
+}
+body .hero .hero-content .hero-left .textbox div h4 {
+  font-weight: 100;
+}
+body .hero .hero-content .hero-left .textbox div p {
+  margin-bottom: 1.5em;
+}
+body .hero .hero-content .hero-left .textbox div a {
+  background-color: #79FA4D;
+  text-decoration: none;
+  color: #0A0A0A;
+  padding: 0.5em 4em 0.5em 4em;
+}
+body .hero .hero-content .hero-left .textbox div a:hover {
+  transition: 0.2s;
+  color: white;
+}
+body .hero .hero-content .hero-left .hero-lines {
+  height: 100%;
+  width: 1000%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  overflow: hidden;
+}
+body .hero .hero-content .hero-left .hero-lines hr {
+  margin: 10vh 0px 0px 0px;
+  border: none;
+  height: 6px;
+  background-color: #0A0A0A;
+}
+body .hero .hero-content .hero-left .hero-lines hr:nth-child(1), body .hero .hero-content .hero-left .hero-lines hr:nth-child(2), body .hero .hero-content .hero-left .hero-lines hr:nth-child(3), body .hero .hero-content .hero-left .hero-lines hr:nth-child(4) {
+  width: 10%;
+}
+body .hero .hero-content .hero-right {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #0A0A0A;
+}
+body .hero .hero-content .hero-right img {
+  width: 100%;
+}
+@media only screen and (max-width: 900px) {
+  body .hero .container {
+    width: 100%;
+  }
+  body .hero .hero-content {
+    flex-direction: column;
+    overflow: visible;
+  }
+  body .hero .hero-content .hero-left {
+    width: 100%;
+  }
+  body .hero .hero-content .hero-left .hero-lines hr {
+    margin: 4vh 0px 0px 0px;
+  }
+  body .hero .hero-content .hero-right {
+    width: 100%;
+  }
+}
+body .pricing-button {
+  color: black;
+  font-size: 1em;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  background-color: #79FA4D;
+  width: 100px;
+  height: 100px;
+  border: 0;
+  outline: 0;
+  z-index: 100;
+  cursor: pointer;
+  line-height: 1.5em;
+  letter-spacing: 3px;
+}
+body .pricing-button:hover {
+  border-radius: 50%;
+  transition: 0.3s;
+  color: white;
+}
+body #pricing-section {
+  width: 100%;
+  height: 200vh;
+}
+
+/*# sourceMappingURL=thema.css.map */

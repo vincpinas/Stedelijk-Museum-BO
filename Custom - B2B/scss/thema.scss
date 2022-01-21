@@ -1,32 +1,184 @@
+@import 'colors';
+
 @font-face {
     font-family: Union;
     src: url("../Union/union_regular.woff2") format("opentype");
 }   
 
+h1, h2, h3, h4, li, ul {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: $white;
     color: $black;
     font-family: 'Union';
+    padding: 0;
+    margin: 0;
 
     .container  {
-        width: 80%;
+        width: 95%;
         margin: 20px auto;
     }
 
+    @media only screen and (max-width: 900px) {
+
+        .container {
+            width: 100%;
+        }
+
+    }
+
+    .hero {
+        height: 100vh;
+
+        .hero_title {
+            background-color: $black;
+            padding: 1em;
+
+            .logo {
+                fill: white;
+            }
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: row;
+            height: 80%;
+            overflow: hidden;
+
+            .hero-left {
+                width: 50%;
+                position: relative;
+                
+                .textbox {
+                    height: 70%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    h1 {
+                        font-size: 7vh;
+                        font-weight: lighter;
+                        color: $black;
+                        text-shadow: -2px -2px $white, 2px -2px 0 $white, -2px 2px 0 $white, 2px 2px 0 $white;
+                        z-index: 4;
+                        margin-left: 2px;
+                    }
+
+                    div {
+                        background-color: $black;
+                        color: white;
+                        z-index: 4;
+                        padding: 30px 6px 30px 6px;
+                        font-weight: 100;
+
+                        h4 {
+                            font-weight: 100;
+                        }
+
+                        p {
+                            margin-bottom: 1.5em;
+                        }
+
+                        a {
+                            background-color: $green;
+                            text-decoration: none;
+                            color: $black;
+                            padding: .5em 4em .5em 4em;
+                        }
+
+                        a:hover {
+                            transition: .2s;
+                            color: white;
+                        }
+                    }
+                }
+
+                .hero-lines {
+                    height: 100%;
+                    width: 1000%;
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    overflow: hidden;
+                    hr {
+                        margin: 10vh 0px 0px 0px;
+                        border: none;
+                        height: 6px;
+                        background-color: $black;
+                    }
+                    hr:nth-child(1), hr:nth-child(2), hr:nth-child(3), hr:nth-child(4){
+                        width: 10%;
+                    }
+                }
+            }
+
+            .hero-right {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                background-color: $black;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+
+            .container {
+                width: 100%;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                overflow: visible;
+
+                .hero-left {
+                    width: 100%;
+
+                    .hero-lines {
+                        hr{
+                            margin: 4vh 0px 0px 0px;
+                        }
+                    }
+                }
+
+                .hero-right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
     .pricing-button {
-        color: white;
+        color: black;
+        font-size: 1em;
         display: block;
         position: fixed;
         bottom: 0;
         right: 0;
         margin: 20px;
-        box-shadow: 5px 5px 10px lighten($red, 20%);
-        background-color: $red;
+        background-color: $green;
         width: 100px;
         height: 100px;
-        border-radius: 50%;
         border: 0;
         outline: 0;
+        z-index: 100;
+        cursor: pointer;
+        line-height: 1.5em;
+        letter-spacing: 3px;
+    }
+
+    .pricing-button:hover {
+        border-radius: 50%;
+        transition: .3s;
+        color: white;
     }
 
     #pricing-section {

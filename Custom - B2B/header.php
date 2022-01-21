@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
-<head class="navbar" >
+<head class="navbar container" >
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <title><?php bloginfo( 'name' ); ?></title>
     <?php wp_head(); ?>
