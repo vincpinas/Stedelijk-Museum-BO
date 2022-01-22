@@ -16,6 +16,7 @@ body {
     font-family: 'Union';
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 
     .container  {
         width: 95%;
@@ -83,16 +84,18 @@ body {
                             margin-bottom: 1.5em;
                         }
 
-                        a {
+                        #hero-button {
                             background-color: $green;
                             text-decoration: none;
                             color: $black;
                             padding: .5em 4em .5em 4em;
-                        }
+                            border: none;
+                            outline: none;
 
-                        a:hover {
-                            transition: .2s;
-                            color: white;
+                            &:hover {
+                                transition: .2s;
+                                color: white;
+                            }
                         }
                     }
                 }
@@ -173,16 +176,100 @@ body {
         cursor: pointer;
         line-height: 1.5em;
         letter-spacing: 3px;
-    }
 
-    .pricing-button:hover {
-        border-radius: 50%;
-        transition: .3s;
-        color: white;
+        &:hover {
+            border-radius: 50%;
+            transition: .3s;
+            color: white;
+        }
     }
 
     #pricing-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        height: 200vh;
+        height: fit-content;
+        margin-top: 3rem;
+
+
+        .wrapper {
+            background-color: rgb(233, 233, 233);
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                background-color: rgb(212, 212, 212);
+                padding: 9px;
+                font-size: 0.9em;
+            }
+
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .ticket-selector {
+                    color: black;
+                    width: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 25px 70px;
+        
+                    .title {
+                        font-weight: bolder;
+                    }
+        
+                    .ticket-price {
+                        font-weight: bold;
+                        font-size: 1.25em;
+                        margin: 1rem;
+                        letter-spacing: 1px;
+
+                        .number {
+                            font-weight: initial;
+                            font-size: 1.4em;
+                        }
+                    }
+
+                    ul {
+                        list-style: none;
+                        margin-top: 1rem;
+                        margin-bottom: 2rem;
+                        text-align: initial;
+
+                        li {
+                            padding: 10px;
+
+                            i { 
+                                font-size: 1.15em;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+
+                    .ticket-button {
+                        background-color: $black;
+                        text-decoration: none;
+                        color: $white;
+                        padding: .5em 4em .5em 4em;
+                        border: none;
+                        outline: none;
+
+                        &:hover {
+                            transition: .2s;
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

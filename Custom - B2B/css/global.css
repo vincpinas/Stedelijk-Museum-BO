@@ -13,6 +13,7 @@ body {
   font-family: "Union";
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 body .container {
   width: 95%;
@@ -71,13 +72,15 @@ body .hero .hero-content .hero-left .textbox div h4 {
 body .hero .hero-content .hero-left .textbox div p {
   margin-bottom: 1.5em;
 }
-body .hero .hero-content .hero-left .textbox div a {
+body .hero .hero-content .hero-left .textbox div #hero-button {
   background-color: #79FA4D;
   text-decoration: none;
   color: #0A0A0A;
   padding: 0.5em 4em 0.5em 4em;
+  border: none;
+  outline: none;
 }
-body .hero .hero-content .hero-left .textbox div a:hover {
+body .hero .hero-content .hero-left .textbox div #hero-button:hover {
   transition: 0.2s;
   color: white;
 }
@@ -150,8 +153,79 @@ body .pricing-button:hover {
   color: white;
 }
 body #pricing-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 200vh;
+  height: fit-content;
+  margin-top: 3rem;
+}
+body #pricing-section .wrapper {
+  background-color: #e9e9e9;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #pricing-section .wrapper h3 {
+  background-color: #d4d4d4;
+  padding: 9px;
+  font-size: 0.9em;
+}
+body #pricing-section .wrapper div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body #pricing-section .wrapper div .ticket-selector {
+  color: black;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px 70px;
+}
+body #pricing-section .wrapper div .ticket-selector .title {
+  font-weight: bolder;
+}
+body #pricing-section .wrapper div .ticket-selector .ticket-price {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: 1rem;
+  letter-spacing: 1px;
+}
+body #pricing-section .wrapper div .ticket-selector .ticket-price .number {
+  font-weight: initial;
+  font-size: 1.4em;
+}
+body #pricing-section .wrapper div .ticket-selector ul {
+  list-style: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: initial;
+}
+body #pricing-section .wrapper div .ticket-selector ul li {
+  padding: 10px;
+}
+body #pricing-section .wrapper div .ticket-selector ul li i {
+  font-size: 1.15em;
+  margin-right: 10px;
+}
+body #pricing-section .wrapper div .ticket-selector .ticket-button {
+  background-color: #0A0A0A;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 0.5em 4em 0.5em 4em;
+  border: none;
+  outline: none;
+}
+body #pricing-section .wrapper div .ticket-selector .ticket-button:hover {
+  transition: 0.2s;
+  color: #79FA4D;
 }
 
 .container .menu ul {

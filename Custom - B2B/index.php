@@ -30,7 +30,7 @@ endif;  */
                 <div>
                     <h4>TOUR DOOR KUNSTENAAR</h4>
                     <p>Join us today and get involved. Discover all that we have to offer and choose the package that suits you best. There are different levels of corporate support available. As a company, you can organize special events for your relations and book inspiration sessions that are valuable for your organization.</p>
-                    <a href="#pricing-section">explore</a>
+                    <button id="hero-button">explore</button>
                 </div>
             </div>
             <div class="hero-lines" >
@@ -67,7 +67,51 @@ endif;  */
     ?>
 </div>
 
-<section id='pricing-section'>
+<section id="pricing-section">
+    <div class="wrapper">
+        <h3>POPULAR OPTIONS</h3>
+        <div>
+            <div class="ticket-selector">
+                <span class="title">Basis</span>
+                <span class="ticket-price"><span class="number">€19.99</span>/pp</span>
+                <ul>
+                    <li><i class="fas fa-check-square"></i> Tour door het museum</li>
+                    <li><i class="fas fa-check-square"></i> Gratis audio tour optie</li>
+                    <li><i class="fas fa-check-square"></i> Gratis beschikking tot alle tentoonstellingen</li>
+                    <li><i class="fas fa-square"></i> Workshop met de tour gevende</li>
+                    <li><i class="fas fa-square"></i> Gratis catering door het museum </li>
+                    <li><i class="fas fa-square"></i> Gratis kluisje voor belangerijke spullen</li>
+                </ul>
+                <button class="ticket-button">ORDER NOW</button>
+            </div>
+            <div class="ticket-selector">
+                <span class="title">Basis + Workshop</span>
+                <span class="ticket-price"><span class="number">€24.99</span>/pp</span>
+                <ul>
+                    <li><i class="fas fa-check-square"></i> Tour door het museum</li>
+                    <li><i class="fas fa-check-square"></i> Gratis audio tour optie</li>
+                    <li><i class="fas fa-check-square"></i> Gratis beschikking tot alle tentoonstellingen</li>
+                    <li><i class="fas fa-check-square"></i> Workshop met de tour gevende</li>
+                    <li><i class="fas fa-square"></i> Gratis catering door het museum </li>
+                    <li><i class="fas fa-square"></i> Gratis kluisje voor belangerijke spullen</li>
+                </ul>
+                <button class="ticket-button">ORDER NOW</button>                
+            </div>
+            <div class="ticket-selector">
+                <span class="title">Premium</span>   
+                <span class="ticket-price"><span class="number">€34.99</span>/pp</span>     
+                <ul>
+                    <li><i class="fas fa-check-square"></i> Tour door het museum</li>
+                    <li><i class="fas fa-check-square"></i> Gratis audio tour optie</li>
+                    <li><i class="fas fa-check-square"></i> Gratis beschikking tot alle tentoonstellingen</li>
+                    <li><i class="fas fa-check-square"></i> Workshop met de tour gevende</li>
+                    <li><i class="fas fa-check-square"></i> Gratis catering door het museum </li>
+                    <li><i class="fas fa-check-square"></i> Gratis kluisje voor belangerijke spullen</li>
+                </ul>    
+                <button class="ticket-button">ORDER NOW</button>
+            </div>
+        </div>
+    </div>
 </section>
 
 <?php get_footer(); ?>
