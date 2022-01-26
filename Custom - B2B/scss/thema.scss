@@ -1,4 +1,4 @@
-@import 'colors';
+@import 'variables';
 
 @font-face {
     font-family: Union;
@@ -9,6 +9,31 @@ h1, h2, h3, h4, li, ul {
     margin: 0;
     padding: 0;
 }
+
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a, button, input[type="submit"] {
+    text-decoration: none;
+    color: var($black);
+}
+
+/* CSS Reset */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
 
 body {
     background-color: $white;
@@ -23,7 +48,7 @@ body {
         margin: 20px auto;
     }
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: $breakpoint-tablet) {
 
         .container {
             width: 100%;
@@ -132,7 +157,7 @@ body {
             }
         }
 
-        @media only screen and (max-width: 900px) {
+        @media only screen and (max-width: $breakpoint-tablet) {
 
             .container {
                 width: 100%;
@@ -184,15 +209,29 @@ body {
         }
     }
 
+    .order-overlay {
+        color: $white;
+        z-index: 2000;
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    
+        .overlay-inner {
+            background-color: black;
+            padding: 200px;
+        }
+    }
+
     #pricing-section {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: fit-content;
         margin-top: 3rem;
-
 
         .wrapper {
             background-color: rgb(233, 233, 233);
@@ -208,7 +247,7 @@ body {
                 font-size: 0.9em;
             }
 
-            div {
+            .ticket-container {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -270,6 +309,77 @@ body {
                     }
                 }
             }
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet) {
+            .wrapper {
+                margin: 5rem 0rem 0rem 5rem;
+                flex-direction: column;
+                .ticket-container { flex-direction: column; }
+                .ticket-container > * { margin: 1rem; }
+            }
+        }
+    }
+
+    #footer > * {
+        margin: 1rem;
+    }
+
+    #footer {
+        color: $white;
+        background-color: $black;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        img {
+            width: 200px;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: initial;
+
+            p { padding:0;margin:0; }
+
+            .nieuwsbrief-button {
+                margin: 0.5rem 0 0 0;
+                color: $white;
+                cursor: pointer;
+                padding: 3px 10px;
+                outline: 0;
+                background: 0;
+                border: 3.5px solid $white;
+                border-radius: 1.5px;
+                transition: all .5s;
+
+                &:hover {
+                    border: 3.5px solid $green;
+                }
+            }
+
+            .socials {
+                h4 {
+                    margin: 1rem 0 1rem 0;
+                }
+                span > * {
+                    margin: 5px;
+                    transition: all .5s;
+                    color: $white;
+
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: $breakpoint-tablet) {
+            flex-direction: column;
         }
     }
 }

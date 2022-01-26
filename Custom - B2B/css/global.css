@@ -7,6 +7,50 @@ h1, h2, h3, h4, li, ul {
   padding: 0;
 }
 
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a, button, input[type=submit] {
+  text-decoration: none;
+  color: var(#0A0A0A);
+}
+
+/* CSS Reset */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 body {
   background-color: #FFFFFF;
   color: #0A0A0A;
@@ -152,9 +196,22 @@ body .pricing-button:hover {
   transition: 0.3s;
   color: white;
 }
+body .order-overlay {
+  color: #FFFFFF;
+  z-index: 2000;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+body .order-overlay .overlay-inner {
+  background-color: black;
+  padding: 200px;
+}
 body #pricing-section {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -174,12 +231,12 @@ body #pricing-section .wrapper h3 {
   padding: 9px;
   font-size: 0.9em;
 }
-body #pricing-section .wrapper div {
+body #pricing-section .wrapper .ticket-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-body #pricing-section .wrapper div .ticket-selector {
+body #pricing-section .wrapper .ticket-container .ticket-selector {
   color: black;
   width: fit-content;
   display: flex;
@@ -189,33 +246,33 @@ body #pricing-section .wrapper div .ticket-selector {
   text-align: center;
   padding: 25px 70px;
 }
-body #pricing-section .wrapper div .ticket-selector .title {
+body #pricing-section .wrapper .ticket-container .ticket-selector .title {
   font-weight: bolder;
 }
-body #pricing-section .wrapper div .ticket-selector .ticket-price {
+body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-price {
   font-weight: bold;
   font-size: 1.25em;
   margin: 1rem;
   letter-spacing: 1px;
 }
-body #pricing-section .wrapper div .ticket-selector .ticket-price .number {
+body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-price .number {
   font-weight: initial;
   font-size: 1.4em;
 }
-body #pricing-section .wrapper div .ticket-selector ul {
+body #pricing-section .wrapper .ticket-container .ticket-selector ul {
   list-style: none;
   margin-top: 1rem;
   margin-bottom: 2rem;
   text-align: initial;
 }
-body #pricing-section .wrapper div .ticket-selector ul li {
+body #pricing-section .wrapper .ticket-container .ticket-selector ul li {
   padding: 10px;
 }
-body #pricing-section .wrapper div .ticket-selector ul li i {
+body #pricing-section .wrapper .ticket-container .ticket-selector ul li i {
   font-size: 1.15em;
   margin-right: 10px;
 }
-body #pricing-section .wrapper div .ticket-selector .ticket-button {
+body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-button {
   background-color: #0A0A0A;
   text-decoration: none;
   color: #FFFFFF;
@@ -223,9 +280,76 @@ body #pricing-section .wrapper div .ticket-selector .ticket-button {
   border: none;
   outline: none;
 }
-body #pricing-section .wrapper div .ticket-selector .ticket-button:hover {
+body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-button:hover {
   transition: 0.2s;
   color: #79FA4D;
+}
+@media only screen and (max-width: 900px) {
+  body #pricing-section .wrapper {
+    margin: 5rem 0rem 0rem 5rem;
+    flex-direction: column;
+  }
+  body #pricing-section .wrapper .ticket-container {
+    flex-direction: column;
+  }
+  body #pricing-section .wrapper .ticket-container > * {
+    margin: 1rem;
+  }
+}
+body #footer > * {
+  margin: 1rem;
+}
+body #footer {
+  color: #FFFFFF;
+  background-color: #0A0A0A;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+body #footer img {
+  width: 200px;
+}
+body #footer .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+}
+body #footer .contact p {
+  padding: 0;
+  margin: 0;
+}
+body #footer .contact .nieuwsbrief-button {
+  margin: 0.5rem 0 0 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 3px 10px;
+  outline: 0;
+  background: 0;
+  border: 3.5px solid #FFFFFF;
+  border-radius: 1.5px;
+  transition: all 0.5s;
+}
+body #footer .contact .nieuwsbrief-button:hover {
+  border: 3.5px solid #79FA4D;
+}
+body #footer .contact .socials h4 {
+  margin: 1rem 0 1rem 0;
+}
+body #footer .contact .socials span > * {
+  margin: 5px;
+  transition: all 0.5s;
+  color: #FFFFFF;
+}
+body #footer .contact .socials span > *:hover {
+  color: #79FA4D;
+}
+@media only screen and (max-width: 900px) {
+  body #footer {
+    flex-direction: column;
+  }
 }
 
 .container .menu ul {

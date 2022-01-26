@@ -85,3 +85,31 @@ function art_load_pricing_button() {
     <?php
 }
 add_action('wp_head', 'art_load_pricing_button');
+
+function art_load_order_overlay() {
+  ?>
+      <script>
+          const openOverlay = () => {
+            const overlay = document.createElement('div');
+            overlay.className = 'order-overlay'
+
+            const overlay_inner = document.createElement('div');
+            overlay_inner.className = 'overlay-inner'
+            const close_btn = document.createElement('span')
+            close_btn.innerHTML = "&#10006"
+            close_btn.addEventListener('click', () => { document.body.removeChild(document.querySelector(".order-overlay")) })
+
+            overlay_inner.appendChild(close_btn)
+            overlay.appendChild(overlay_inner)
+            document.body.insertAdjacentElement('afterbegin', overlay);
+          }
+
+          document.addEventListener('DOMContentLoaded', () => {
+              document.querySelectorAll(".ticket-button").forEach(item => {
+                item.addEventListener('click', () => openOverlay());
+              });
+          });
+      </script>
+  <?php
+}
+add_action('wp_head', 'art_load_order_overlay');

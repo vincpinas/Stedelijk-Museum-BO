@@ -70,7 +70,7 @@ endif;  */
 <section id="pricing-section">
     <div class="wrapper">
         <h3>POPULAR OPTIONS</h3>
-        <div>
+        <div class="ticket-container">
             <div class="ticket-selector">
                 <span class="title">Basis</span>
                 <span class="ticket-price"><span class="number">€19.99</span>/pp</span>
