@@ -28,17 +28,12 @@ endif;  */
             <div class="textbox">
                 <h1>WORKSHOP MET KUNSTENAAR</h1>
                 <div>
-                    <h4>TOUR DOOR KUNSTENAAR</h4>
-                    <p>Join us today and get involved. Discover all that we have to offer and choose the package that suits you best. There are different levels of corporate support available. As a company, you can organize special events for your relations and book inspiration sessions that are valuable for your organization.</p>
-                    <button id="hero-button">explore</button>
+                    <h4>BEDRIJFSUITJE BIJ STEDELIJK MUSEUM AMSTERDAM</h4>
+                    <p>Volg een workshop van een van de kunstenaar(s) dat een expositie heeft in het Stedelijk Museum. Even ogen van uw computer af, schort aan, vouw je mouwen op en ga helemaal los op het canvas! Eerst komt er een rondleiding en vervolgens gaan we met de kunstenaar aan het werk om ons eigen kunst te maken.</p>
+                    <button id="hero-button">LEES MEER</button>
                 </div>
             </div>
             <div class="hero-lines" >
-                <hr>
-                <hr>
-                <hr>
-                <hr>
-                <hr>
                 <hr>
                 <hr>
                 <hr>
@@ -54,17 +49,61 @@ endif;  */
         </div>
     </div>
 </div>
+<div class="about container">
+    <div class="about-left">
+        <h1 class="headtitle">ORGANISEER EEN BEDRIJFSUITJE
+        IN HET STEDELIJK MUSEUM
+        MET ARTIESTEN VAN DE EXPO’S.
+        COMPUTER UIT, MOUWEN OPVOUWEN
+        EN BEZIG ZIJN.
+        </h1>
+        <div class="tekstbox">
+            <h2 class="title">Rondleidingen</h2>
+            <p>Ga mee op reis door de tijd en de wereld tijdens een van de <a href="#">rondleidingen in Stedelijk Museum Amsterdam</a>. Daarnaast is het mogelijk om een programma voor uw groep te laten samenstellen. Neem contact met ons op via 020 5732 911  (ma t/m vrij: 9.00 - 17.00 uur) om de mogelijkheden te bespreken.</p>
+            <h3 class="title">Avondopenstelling</h3>
+            <p>Op aanvraag kan het museum exclusief voor uw groep langer openblijven. Meer informatie en tarieven? Neem contact met ons op via <a href="mailto:info@stedelijk.nl">info@stedelijk.nl</a>.</p>
+        </div>
+    </div>
+    <div class="about-right">
+        <div class="tekstbox">
+            <h2 class="title">Naar het Stedelijk Museum Amsterdam voor een bedrijfsuitje, verjaardag etc.</h2>
+            <p>Volg een workshop van een van de kunstenaar(s) dat een expositie heeft 
+            in het Stedelijk Museum. Even ogen van uw computer af, schort aan,
+            vouw je mouwen op en ga helemaal los op het canvas!
+            Eerst komt er een rondleiding en vervolgens gaan we met de
+            kunstenaar aan het werk om ons eigen kunst te maken.
+            </p>
+            <a class="cta" href="#">BOEK NU</a>
+        </div>
+        <div class="tekstbox2">
+            <div>
+                <h3 class="title" >Adres en route</h3>
+                <p>Museumplein 10 1071 DJ Amsterdam</p>
+                <a href="#">Plan route via Google Maps ›</a>
+            </div>
+            <div>
+                <h3 class="title" >Bezoekersinformatie</h3>
+                <p>Het museum is van dinsdag t/m zondag  open tussen 10.00 - 17.00 uur.</p>
+                <a href="#">Openingstijden en prijzen ›</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="slider-container">
+<div class="slider-container container">
     <?php // foto slider
     echo do_shortcode('[smartslider3 slider="2"]');
     ?>
 </div>
 
-<div class="reviews-container">
-    <?php // google reviews slider
-    echo do_shortcode( '[grw id="33"]' ); 
-    ?>
+
+<div class="reviews container">
+    <h1>BEKIJK WAT DE ANDEREN ERVAN VONDEN</h1>
+    <div class="reviews-container">
+        <?php // google reviews slider
+        echo do_shortcode( '[grw id="33"]' ); 
+        ?>
+    </div>
 </div>
 
 <section id="pricing-section">

@@ -7,6 +7,10 @@ h1, h2, h3, h4, li, ul {
   padding: 0;
 }
 
+p {
+  line-height: 22px;
+}
+
 *, *::before, *::after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -112,6 +116,7 @@ body .hero .hero-content .hero-left .textbox div {
 }
 body .hero .hero-content .hero-left .textbox div h4 {
   font-weight: 100;
+  padding-bottom: 1em;
 }
 body .hero .hero-content .hero-left .textbox div p {
   margin-bottom: 1.5em;
@@ -123,6 +128,9 @@ body .hero .hero-content .hero-left .textbox div #hero-button {
   padding: 0.5em 4em 0.5em 4em;
   border: none;
   outline: none;
+  cursor: pointer;
+  font-size: 0.75em;
+  font-weight: bold;
 }
 body .hero .hero-content .hero-left .textbox div #hero-button:hover {
   transition: 0.2s;
@@ -135,12 +143,15 @@ body .hero .hero-content .hero-left .hero-lines {
   z-index: 1;
   top: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 body .hero .hero-content .hero-left .hero-lines hr {
-  margin: 10vh 0px 0px 0px;
   border: none;
   height: 6px;
   background-color: #0A0A0A;
+  margin-top: 5em;
 }
 body .hero .hero-content .hero-left .hero-lines hr:nth-child(1), body .hero .hero-content .hero-left .hero-lines hr:nth-child(2), body .hero .hero-content .hero-left .hero-lines hr:nth-child(3), body .hero .hero-content .hero-left .hero-lines hr:nth-child(4) {
   width: 10%;
@@ -151,9 +162,10 @@ body .hero .hero-content .hero-right {
   justify-content: center;
   align-items: flex-start;
   background-color: #0A0A0A;
+  overflow: hidden;
 }
 body .hero .hero-content .hero-right img {
-  width: 100%;
+  object-fit: cover;
 }
 @media only screen and (max-width: 900px) {
   body .hero .container {
@@ -166,12 +178,126 @@ body .hero .hero-content .hero-right img {
   body .hero .hero-content .hero-left {
     width: 100%;
   }
+  body .hero .hero-content .hero-left .hero-lines {
+    width: 100%;
+  }
   body .hero .hero-content .hero-left .hero-lines hr {
     margin: 4vh 0px 0px 0px;
+    width: 100%;
+  }
+  body .hero .hero-content .hero-left .hero-lines hr:nth-child(1), body .hero .hero-content .hero-left .hero-lines hr:nth-child(2), body .hero .hero-content .hero-left .hero-lines hr:nth-child(3), body .hero .hero-content .hero-left .hero-lines hr:nth-child(4) {
+    width: 100%;
   }
   body .hero .hero-content .hero-right {
     width: 100%;
+    background-color: red;
   }
+  body .hero .hero-content .hero-right img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+body .about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4em;
+}
+body .about .title {
+  margin: 2em 0 0.5em 0;
+}
+body .about a {
+  color: #79FA4D;
+  font-weight: bold;
+}
+body .about a:hover {
+  transition: 0.25s;
+  color: #0A0A0A;
+}
+body .about .about-left {
+  max-width: 60%;
+}
+body .about .about-left .headtitle {
+  font-size: 2em;
+}
+body .about .about-left .tekstbox .title {
+  font-weight: bold;
+}
+body .about .about-right {
+  max-width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .about .about-right .tekstbox {
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  padding: 3em;
+}
+body .about .about-right .tekstbox .title {
+  margin-top: 0;
+}
+body .about .about-right .tekstbox .cta {
+  background-color: #79FA4D;
+  text-decoration: none;
+  color: #0A0A0A;
+  padding: 0.5em 4em 0.5em 4em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+body .about .about-right .tekstbox .cta:hover {
+  transition: 0.2s;
+  color: white;
+}
+body .about .about-right .tekstbox p {
+  margin-bottom: 1em;
+}
+body .about .about-right .tekstbox2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body .about .about-right .tekstbox2 div {
+  width: 45%;
+}
+@media only screen and (max-width: 900px) {
+  body .about {
+    flex-direction: column;
+  }
+  body .about .about-left {
+    max-width: 100%;
+  }
+  body .about .about-right {
+    max-width: 100%;
+  }
+  body .about .about-right .tekstbox {
+    margin-top: 2em;
+  }
+}
+body .slider-container {
+  width: 95%;
+  padding: 1em;
+  background-color: #0A0A0A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 900px) {
+  body .slider-container {
+    width: 100%;
+  }
+}
+body .reviews {
+  padding: 4em 0 4em 0;
+}
+body .reviews h1 {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+body .reviews .reviews-container {
+  padding: 1em;
+  background-color: black;
 }
 body .pricing-button {
   color: black;
@@ -216,25 +342,27 @@ body #pricing-section {
   align-items: center;
   width: 100%;
   height: fit-content;
-  margin-top: 3rem;
+  margin-bottom: 4em;
 }
 body #pricing-section .wrapper {
-  background-color: #e9e9e9;
+  background-color: #0A0A0A;
   width: fit-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 body #pricing-section .wrapper h3 {
-  background-color: #d4d4d4;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
   padding: 9px;
   font-size: 0.9em;
 }
 body #pricing-section .wrapper .ticket-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
 }
 body #pricing-section .wrapper .ticket-container .ticket-selector {
   color: black;
@@ -245,6 +373,8 @@ body #pricing-section .wrapper .ticket-container .ticket-selector {
   align-items: center;
   text-align: center;
   padding: 25px 70px;
+  margin: 1em;
+  background-color: #FFFFFF;
 }
 body #pricing-section .wrapper .ticket-container .ticket-selector .title {
   font-weight: bolder;
@@ -279,6 +409,7 @@ body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-button
   padding: 0.5em 4em 0.5em 4em;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-button:hover {
   transition: 0.2s;
@@ -286,14 +417,17 @@ body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-button
 }
 @media only screen and (max-width: 900px) {
   body #pricing-section .wrapper {
-    margin: 5rem 0rem 0rem 5rem;
     flex-direction: column;
   }
   body #pricing-section .wrapper .ticket-container {
     flex-direction: column;
+    align-items: center;
   }
   body #pricing-section .wrapper .ticket-container > * {
     margin: 1rem;
+  }
+  body #pricing-section .wrapper .ticket-selector {
+    margin-top: 1em;
   }
 }
 body #footer > * {
