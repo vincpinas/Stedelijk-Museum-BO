@@ -74,7 +74,7 @@ function art_load_pricing_button() {
 
             const pricing_button = document.createElement('button');
             pricing_button.className = 'pricing-button';
-            pricing_button.innerHTML = 'VIEW PRICES';
+            pricing_button.innerHTML = 'BEKIJK PRIJZEN';
             pricing_button.addEventListener('click', () => smartScroll("#pricing-section"));
 
             document.addEventListener('DOMContentLoaded', () => {
@@ -100,7 +100,7 @@ function art_load_order_overlay() {
             const overlay = create_element('div', 'order-overlay');
             const overlay_inner = create_element('div', 'overlay-inner');
             const close_btn = create_element('span', 'overlay-close', '<i class="fas fa-times"></i>')
-            const thankyoutitle = create_element('h2', 'overlay-title', 'THANK YOU!')
+            const thankyoutitle = create_element('h2', 'overlay-title', 'BEDANKT!')
             const thankyoumsg = create_element('p', 'overlay-thanks', 'Je ticket is verwerkt en besteld.')
             const btn_container = create_element('div', 'overlay-btncontainer')
             const download = create_element('a', 'overlay-button special', 'DOWNLOAD TICKET')
