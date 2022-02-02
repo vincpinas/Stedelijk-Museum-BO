@@ -73,18 +73,18 @@ endif;  */
             Eerst komt er een rondleiding en vervolgens gaan we met de
             kunstenaar aan het werk om ons eigen kunst te maken.
             </p>
-            <a class="cta" href="#">BOEK NU</a>
+            <a class="cta" href="#pricing-section">BOEK NU</a>
         </div>
         <div class="tekstbox2">
             <div>
                 <h3 class="title" >Adres en route</h3>
                 <p>Museumplein 10 1071 DJ Amsterdam</p>
-                <a href="#">Plan route via Google Maps ›</a>
+                <a href="https://www.google.nl/maps/place/Stedelijk+Museum+Amsterdam/@52.3580111,4.8775667,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609e567e9302b:0xec3c9aad1ccadbea!8m2!3d52.3580111!4d4.8797554">Plan route via Google Maps ›</a>
             </div>
             <div>
                 <h3 class="title" >Bezoekersinformatie</h3>
                 <p>Het museum is van dinsdag t/m zondag  open tussen 10.00 - 17.00 uur.</p>
-                <a href="#">Openingstijden en prijzen ›</a>
+                <a href="https://www.stedelijk.nl/nl/faq/wat-zijn-de-openingstijden">Openingstijden en prijzen ›</a>
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@ endif;  */
 
 
 <div class="reviews container">
-    <h1>BEKIJK WAT DE ANDEREN ERVAN VONDEN</h1>
+    <h1>BEKIJK WAT DE ANDEREN ERVAN VINDEN</h1>
     <div class="reviews-container">
         <?php // google reviews slider
         echo do_shortcode( '[grw id="33"]' ); 
@@ -108,7 +108,7 @@ endif;  */
 
 <section id="pricing-section">
     <div class="wrapper">
-        <h3>POPULAR OPTIONS</h3>
+        <h3>POPULAIRE OPTIES</h3>
         <div class="ticket-container">
             <div class="ticket-selector">
                 <span class="title">Basis</span>
@@ -121,7 +121,7 @@ endif;  */
                     <li><i class="fas fa-square"></i> Gratis catering door het museum </li>
                     <li><i class="fas fa-square"></i> Gratis kluisje voor belangerijke spullen</li>
                 </ul>
-                <button class="ticket-button">ORDER NOW</button>
+                <button class="ticket-button">BOEK NU</button>
             </div>
             <div class="ticket-selector">
                 <span class="title">Basis + Workshop</span>
@@ -134,7 +134,7 @@ endif;  */
                     <li><i class="fas fa-square"></i> Gratis catering door het museum </li>
                     <li><i class="fas fa-square"></i> Gratis kluisje voor belangerijke spullen</li>
                 </ul>
-                <button class="ticket-button">ORDER NOW</button>                
+                <button class="ticket-button">BOEK NU</button>                
             </div>
             <div class="ticket-selector">
                 <span class="title">Premium</span>   
@@ -147,7 +147,7 @@ endif;  */
                     <li><i class="fas fa-check-square"></i> Gratis catering door het museum </li>
                     <li><i class="fas fa-check-square"></i> Gratis kluisje voor belangerijke spullen</li>
                 </ul>    
-                <button class="ticket-button">ORDER NOW</button>
+                <button class="ticket-button">BOEK NU</button>
             </div>
         </div>
     </div>
