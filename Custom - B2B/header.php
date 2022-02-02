@@ -8,7 +8,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="container">
+<div class="container nav">
 <?php wp_page_menu($args = array(
         'menu' => 'hoofdmenu'
         ) 
