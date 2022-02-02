@@ -336,7 +336,7 @@ body .order-overlay .overlay-inner {
   background-color: black;
   padding: 200px;
 }
-body #pricing-section {
+body #pricing-sectizon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -344,7 +344,7 @@ body #pricing-section {
   height: fit-content;
   margin-bottom: 4em;
 }
-body #pricing-section .wrapper {
+body #pricing-sectizon .wrapper {
   background-color: #0A0A0A;
   width: fit-content;
   width: 100%;
@@ -352,19 +352,19 @@ body #pricing-section .wrapper {
   flex-direction: column;
   align-items: center;
 }
-body #pricing-section .wrapper h3 {
+body #pricing-sectizon .wrapper h3 {
   background-color: #0A0A0A;
   color: #FFFFFF;
   padding: 9px;
   font-size: 0.9em;
 }
-body #pricing-section .wrapper .ticket-container {
+body #pricing-sectizon .wrapper .ticket-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector {
   color: black;
   width: fit-content;
   display: flex;
@@ -376,33 +376,33 @@ body #pricing-section .wrapper .ticket-container .ticket-selector {
   margin: 1em;
   background-color: #FFFFFF;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector .title {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector .title {
   font-weight: bolder;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-price {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector .ticket-price {
   font-weight: bold;
   font-size: 1.25em;
   margin: 1rem;
   letter-spacing: 1px;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-price .number {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector .ticket-price .number {
   font-weight: initial;
   font-size: 1.4em;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector ul {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector ul {
   list-style: none;
   margin-top: 1rem;
   margin-bottom: 2rem;
   text-align: initial;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector ul li {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector ul li {
   padding: 10px;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector ul li i {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector ul li i {
   font-size: 1.15em;
   margin-right: 10px;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-button {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector .ticket-button {
   background-color: #0A0A0A;
   text-decoration: none;
   color: #FFFFFF;
@@ -411,22 +411,22 @@ body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-button
   outline: none;
   cursor: pointer;
 }
-body #pricing-section .wrapper .ticket-container .ticket-selector .ticket-button:hover {
+body #pricing-sectizon .wrapper .ticket-container .ticket-selector .ticket-button:hover {
   transition: 0.2s;
   color: #79FA4D;
 }
 @media only screen and (max-width: 900px) {
-  body #pricing-section .wrapper {
+  body #pricing-sectizon .wrapper {
     flex-direction: column;
   }
-  body #pricing-section .wrapper .ticket-container {
+  body #pricing-sectizon .wrapper .ticket-container {
     flex-direction: column;
     align-items: center;
   }
-  body #pricing-section .wrapper .ticket-container > * {
+  body #pricing-sectizon .wrapper .ticket-container > * {
     margin: 1rem;
   }
-  body #pricing-section .wrapper .ticket-selector {
+  body #pricing-sectizon .wrapper .ticket-selector {
     margin-top: 1em;
   }
 }
@@ -486,18 +486,25 @@ body #footer .contact .socials span > *:hover {
   }
 }
 
+.container .menu {
+  width: 95%;
+  margin: 20px auto;
+  height: 100%;
+  background-color: #0A0A0A;
+  padding: 1em 0.5em 1em 0.5em;
+}
 .container .menu ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 95%;
-  margin: 20px auto;
 }
 .container .menu ul a {
   text-decoration: none;
-  color: black;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .container .menu ul a:hover {
   text-decoration: underline;
