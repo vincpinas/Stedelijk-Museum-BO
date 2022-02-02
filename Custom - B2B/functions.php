@@ -89,17 +89,37 @@ add_action('wp_head', 'art_load_pricing_button');
 function art_load_order_overlay() {
   ?>
       <script>
-          const openOverlay = () => {
-            const overlay = document.createElement('div');
-            overlay.className = 'order-overlay'
+          const create_element = (type, classn, innerHTML = '') => {
+            let element = document.createElement(type)
+            element.className = classn, element.innerHTML = innerHTML
 
-            const overlay_inner = document.createElement('div');
-            overlay_inner.className = 'overlay-inner'
-            const close_btn = document.createElement('span')
-            close_btn.innerHTML = "&#10006"
+            return element;
+          }
+
+          const openOverlay = () => {
+            const overlay = create_element('div', 'order-overlay');
+            const overlay_inner = create_element('div', 'overlay-inner');
+            const close_btn = create_element('span', 'overlay-close', '<i class="fas fa-times"></i>')
+            const thankyoutitle = create_element('h2', 'overlay-title', 'THANK YOU!')
+            const thankyoumsg = create_element('p', 'overlay-thanks', 'Je ticket is verwerkt en besteld.')
+            const btn_container = create_element('div', 'overlay-btncontainer')
+            const download = create_element('a', 'overlay-button special', 'DOWNLOAD TICKET')
+            const backtosite = create_element('a', 'overlay-button', 'TERUG NAAR SITE')
+            const followus = create_element('span', 'overlay-socials', 'Volg Ons: <a href="https://www.facebook.com/Stedelijk/"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/stedelijkmuseum/"><i class="fab fa-instagram"></i></a><a href="https://twitter.com/Stedelijk"><i class="fab fa-twitter-square"></i></a><a href="https://www.youtube.com/c/StedelijkMuseumAmsterdam"><i class="fab fa-youtube"></i></a>')
+            
+            download.href = 'ticket.pdf'
+            let date = new Date()
+            download.download = `${date.getFullYear()}${date.getMonth()}${date.getDay()}_stedelijk_ticket.pdf`
+            backtosite.href = 'https://stedelijk.nl/'
             close_btn.addEventListener('click', () => { document.body.removeChild(document.querySelector(".order-overlay")) })
 
             overlay_inner.appendChild(close_btn)
+            overlay_inner.appendChild(thankyoutitle)
+            overlay_inner.appendChild(thankyoumsg)
+            btn_container.appendChild(download)
+            btn_container.appendChild(backtosite)
+            overlay_inner.appendChild(btn_container)
+            overlay_inner.appendChild(followus)
             overlay.appendChild(overlay_inner)
             document.body.insertAdjacentElement('afterbegin', overlay);
           }
