@@ -48,5 +48,5 @@ This project was certainly interesting, and I think wordpress is a very importan
 
 
 [B2B Stedelijk Museum Trello Board]: https://trello.com/b/9tWmuhjZ/stedelijk-museum'
-[B2B Stedelijk Museum Demo]: http://
+[B2B Stedelijk Museum Demo]: http://samedpolat.nl/StedelijkMuseum/
 [Stedelijk Museum]: https://www.stedelijk.nl/nl
