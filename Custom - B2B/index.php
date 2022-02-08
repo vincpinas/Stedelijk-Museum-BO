@@ -58,33 +58,27 @@ endif;  */
         EN BEZIG ZIJN.
         </h1>
         <div class="tekstbox">
-            <h2 class="title">Rondleidingen</h2>
-            <p>Ga mee op reis door de tijd en de wereld tijdens een van de <a href="#">rondleidingen in Stedelijk Museum Amsterdam</a>. Daarnaast is het mogelijk om een programma voor uw groep te laten samenstellen. Neem contact met ons op via 020 5732 911  (ma t/m vrij: 9.00 - 17.00 uur) om de mogelijkheden te bespreken.</p>
-            <h3 class="title">Avondopenstelling</h3>
-            <p>Op aanvraag kan het museum exclusief voor uw groep langer openblijven. Meer informatie en tarieven? Neem contact met ons op via <a href="mailto:info@stedelijk.nl">info@stedelijk.nl</a>.</p>
+            <?php $rondleiding_info = get_post(16); ?>
+            <h2><?php print_r($rondleiding_info->post_title); ?></h2>
+            <?php print_r($rondleiding_info->post_content); ?>
         </div>
     </div>
     <div class="about-right">
         <div class="tekstbox">
-            <h2 class="title">Naar het Stedelijk Museum Amsterdam voor een bedrijfsuitje, verjaardag etc.</h2>
-            <p>Volg een workshop van een van de kunstenaar(s) dat een expositie heeft 
-            in het Stedelijk Museum. Even ogen van uw computer af, schort aan,
-            vouw je mouwen op en ga helemaal los op het canvas!
-            Eerst komt er een rondleiding en vervolgens gaan we met de
-            kunstenaar aan het werk om ons eigen kunst te maken.
-            </p>
-            <a class="cta" href="#pricing-section">BOEK NU</a>
+            <?php $bedrijfsuitje_info = get_post(17); ?>
+            <h2><?php print_r($bedrijfsuitje_info->post_title); ?></h2>
+            <?php print_r($bedrijfsuitje_info->post_content); ?>
         </div>
         <div class="tekstbox2">
             <div>
-                <h3 class="title" >Adres en route</h3>
-                <p>Museumplein 10 1071 DJ Amsterdam</p>
-                <a href="https://www.google.nl/maps/place/Stedelijk+Museum+Amsterdam/@52.3580111,4.8775667,17z/data=!3m1!4b1!4m5!3m4!1s0x47c609e567e9302b:0xec3c9aad1ccadbea!8m2!3d52.3580111!4d4.8797554">Plan route via Google Maps ›</a>
+                <?php $adress_info_subheader = get_post(21); ?>
+                <h3><?php print_r($adress_info_subheader->post_title); ?></h3>
+                <?php print_r($adress_info_subheader->post_content); ?>
             </div>
             <div>
-                <h3 class="title" >Bezoekersinformatie</h3>
-                <p>Het museum is van dinsdag t/m zondag  open tussen 10.00 - 17.00 uur.</p>
-                <a href="https://www.stedelijk.nl/nl/faq/wat-zijn-de-openingstijden">Openingstijden en prijzen ›</a>
+                <?php $bezoeker_info_subheader = get_post(23); ?>
+                <h3><?php print_r($bezoeker_info_subheader->post_title); ?></h3>
+                <?php print_r($bezoeker_info_subheader->post_content); ?>
             </div>
         </div>
     </div>
@@ -108,48 +102,9 @@ endif;  */
 
 <section id="pricing-section">
     <div class="wrapper">
-        <h3>POPULAIRE OPTIES</h3>
-        <div class="ticket-container">
-            <div class="ticket-selector">
-                <span class="title">Basis</span>
-                <span class="ticket-price"><span class="number">€19.99</span>/pp</span>
-                <ul>
-                    <li><i class="fas fa-check-square"></i> Tour door het museum</li>
-                    <li><i class="fas fa-check-square"></i> Gratis audio tour optie</li>
-                    <li><i class="fas fa-check-square"></i> Gratis beschikking tot alle tentoonstellingen</li>
-                    <li><i class="fas fa-square"></i> Workshop met de tour gevende</li>
-                    <li><i class="fas fa-square"></i> Gratis catering door het museum </li>
-                    <li><i class="fas fa-square"></i> Gratis kluisje voor belangerijke spullen</li>
-                </ul>
-                <button class="ticket-button">BOEK NU</button>
-            </div>
-            <div class="ticket-selector">
-                <span class="title">Basis + Workshop</span>
-                <span class="ticket-price"><span class="number">€24.99</span>/pp</span>
-                <ul>
-                    <li><i class="fas fa-check-square"></i> Tour door het museum</li>
-                    <li><i class="fas fa-check-square"></i> Gratis audio tour optie</li>
-                    <li><i class="fas fa-check-square"></i> Gratis beschikking tot alle tentoonstellingen</li>
-                    <li><i class="fas fa-check-square"></i> Workshop met de tour gevende</li>
-                    <li><i class="fas fa-square"></i> Gratis catering door het museum </li>
-                    <li><i class="fas fa-square"></i> Gratis kluisje voor belangerijke spullen</li>
-                </ul>
-                <button class="ticket-button">BOEK NU</button>                
-            </div>
-            <div class="ticket-selector">
-                <span class="title">Premium</span>   
-                <span class="ticket-price"><span class="number">€34.99</span>/pp</span>     
-                <ul>
-                    <li><i class="fas fa-check-square"></i> Tour door het museum</li>
-                    <li><i class="fas fa-check-square"></i> Gratis audio tour optie</li>
-                    <li><i class="fas fa-check-square"></i> Gratis beschikking tot alle tentoonstellingen</li>
-                    <li><i class="fas fa-check-square"></i> Workshop met de tour gevende</li>
-                    <li><i class="fas fa-check-square"></i> Gratis catering door het museum </li>
-                    <li><i class="fas fa-check-square"></i> Gratis kluisje voor belangerijke spullen</li>
-                </ul>    
-                <button class="ticket-button">BOEK NU</button>
-            </div>
-        </div>
+        <?php $pricing_section = get_post(14); ?>
+        <h3><?php print_r($pricing_section->post_title); ?></h3>
+        <?php print_r($pricing_section->post_content); ?>
     </div>
 </section>
 
