@@ -95,7 +95,7 @@ endif;  */
     <h1>BEKIJK WAT DE ANDEREN ERVAN VINDEN</h1>
     <div class="reviews-container">
         <?php // google reviews slider
-        echo do_shortcode( '[grw id="33"]' ); 
+        echo do_shortcode( '[grw id="41"]' ); 
         ?>
     </div>
 </div>
